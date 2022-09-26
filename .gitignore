@@ -6,6 +6,8 @@
 *.scss.map
 *.css
 
+.DS_Store
+
 ### NPM ###
 node_modules/
 package-lock.json
