@@ -1,11 +1,12 @@
 import { LitElement, html } from 'lit';
-import styles from '../application.js';
+
+import equalizer from '../equalizer.styles'
 import detail from './book-detail.styles';
 
 
 export class bookDetail extends LitElement {
   static properties = {
-    name: {},
+    title: {},
     author: {},
     img: {},
     genre: {},
@@ -24,7 +25,7 @@ export class bookDetail extends LitElement {
   }
 
   static get styles() {
-    return [ styles, detail ];
+    return [ equalizer, detail ];
   }
 
   render() {
@@ -39,7 +40,7 @@ export class bookDetail extends LitElement {
           </div>
           <div class="card-body">
             <div class="card-header">
-              <h1 class="book-title">${ this.name }</h1>
+              <h1 class="book-title">${ this.title }</h1>
               <h6 class="genre">(${ this.genre })</h6>
             </div>
             <div class="card-content">

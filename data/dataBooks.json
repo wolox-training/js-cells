@@ -1,0 +1,67 @@
+[
+    {
+        "img": "https://elibro.online/img-ebook/la-enfermera-de-brunete-9788408084617.jpg",
+        "title": "LA ENFERMERA DE BRUNETE",
+        "author": "MANUEL MARISTANY",
+        "genre":"Historia",
+        "editorial": "Planeta",
+        "yearOfPublication":"2007"
+    },
+    {
+        "img": "https://elibro.online/img-ebook/jerusalen-caballo-de-troya-1-9788408042037.jpg",
+        "title": "JERUSALEN (CABALLO DE TROYA 1)",
+        "author": "J. J. BENITEZ",
+        "genre":"Ciencia ficción",
+        "editorial": "Planeta",
+        "yearOfPublication":"2013"
+    },
+    {
+        "img": "https://elibro.online/img-ebook/lagrimas-en-la-lluvia-9788432229138.jpg",
+        "title": "LAGRIMAS EN LA LLUVIA",
+        "author": "ROSA MONTERO",
+        "genre":"Literatura",
+        "editorial": "ROSA MONTERO",
+        "yearOfPublication":"2016"
+    },
+    {
+        "img": "https://elibro.online/img-ebook/cuentos-clasicos-de-los-hermanos-grimm-9788493912666.jpg",
+        "title": "CUENTOS CLASICOS DE LOS HERMANOS GRIMM",
+        "author": "JACOB GRIMM,",
+        "genre":"Infantil",
+        "editorial": "BOVEDA",
+        "yearOfPublication":"2011"
+    },
+    {
+        "img": "https://elibro.online/img-ebook/reckless-carne-de-piedra-9788498414530.jpg",
+        "title": "RECKLESS: CARNE DE PIEDRA",
+        "author": "CORNELIA FUNKE",
+        "genre":"Juvenil",
+        "editorial": "SIRUELA",
+        "yearOfPublication":"2010"
+    },
+    {
+        "img": "https://elibro.online/img-ebook/blancanieves-9788426381484.jpg",
+        "title": "BLANCANIEVES",
+        "author": "BENJAMIN LACOMBE",
+        "genre":"Infantil",
+        "editorial": "LUIS VIVES (EDELVIVES)",
+        "yearOfPublication":"2011"
+    },
+    {
+        "img": "https://elibro.online/img-ebook/ana-de-las-tejas-verdes-libro-i-9788496947924.jpg",
+        "title": "ANA DE LAS TEJAS VERDES ( LIBRO I )",
+        "author": "LUCY MAUD",
+        "genre":"Infantil",
+        "editorial": "EL TORO MITICO",
+        "yearOfPublication":"2013"
+    },
+    {
+        "img": "https://elibro.online/img-ebook/significado-cero-9788493614799.jpg",
+        "title": "SIGNIFICADO CERO",
+        "author": "IRENE RODRIGUEZ",
+        "genre":"Novela contemporánea",
+        "editorial": "ALADENA",
+        "yearOfPublication":"2008"
+    }
+    
+]
