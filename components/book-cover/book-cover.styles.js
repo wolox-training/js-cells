@@ -1,8 +1,7 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export default css`
-
-:host {
+  :host {
     display: block;
     width: 198px;
     height: 300px;
@@ -35,8 +34,12 @@ export default css`
     color: #000;
     font-size: 16px;
     font-weight: 700;
+    height: 24px;
     margin: 0;
+    overflow: hidden;
     padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     width: 142px;
   }
 

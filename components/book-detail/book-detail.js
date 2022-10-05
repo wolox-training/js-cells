@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 
-import equalizer from '../equalizer.styles'
+import equalizer from '../../equalizer.styles';
 import detail from './book-detail.styles';
 
 
@@ -11,14 +11,14 @@ export class bookDetail extends LitElement {
     img: {},
     genre: {},
     editorial: {},
-    yearOfPublication: {},
+    yearOfPublication: {}
   };
 
   constructor() {
     super();
-    this.name = 'Título del libro';
+    this.title = 'Título del libro';
     this.author = 'Autor del libro';
-    this.img = 'book-cover';
+    this.img = '';
     this.genre = 'Género';
     this.editorial = 'Editorial';
     this.yearOfPublication = '1994';
@@ -34,8 +34,8 @@ export class bookDetail extends LitElement {
           <div class="card-img">
             <img
               class="book-cover"
-              src="./img/${ this.img }.png"
-              alt="${ this.img }"
+              src="${this.img ? this.img : "./img/book-cover.png"}"
+              alt="${ this.title }"
             />
           </div>
           <div class="card-body">

@@ -149,7 +149,7 @@ export default css`
             font-weight: 700;
             height: 39px;
             line-height: 38px;
-            max-width: 210px;
+            max-width: 221x;
         }
         .genre {
             color: #828282;

@@ -3,26 +3,41 @@ import { css } from "lit-element";
 
 export default css`
   .main {
-    margin: auto;
-    margin: 50px auto;
+    margin: 20px auto;
     min-height: 750px;
     min-width: 376px;
     width: 100%;
+  }
+
+  .main-detail {
+    background-color: lightblue;
+    margin: 0 auto;
+    width: 300px;
   }
 
   .cardList {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
     grid-auto-rows: minmax(300px, auto);
-    grid-row-gap:40px;
+    grid-column-gap: 28px;
+    grid-row-gap: 40px;
+    justify-items: center;
     margin: 0 auto;
     max-width: 899px;
   }
 
+  .searcher-container {
+    margin: 32px auto;
+    width: 600px;
+  }
+
   @media (min-width: 1024px) {
     .main {
-      width: 100%;
       padding-top: 100px;
+    }
+
+    .main-detail {
+      width: 900px;
     }
   }
 
@@ -106,37 +121,5 @@ export default css`
     margin-top: 8px;
     outline-color: #bed23c;
     outline-style: solid;
-  }
-
-  .navbar {
-    background-color: #fff;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 70px;
-    justify-items: center;
-    margin: 0 auto;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
-
-  .logo {
-    align-self: center;
-    height: 70px;
-    width: 212px;
-    display: block;
-  }
-
-  .menu-item {
-    align-self: center;
-    color: #000;
-    display: block;
-    font-size: 18px;
-    height: 18px;
-    line-height: 21px;
-    text-decoration: none;
-    width: 63px;
   }
 `;
