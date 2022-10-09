@@ -1,64 +1,62 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html } from "lit";
 
-import equalizer from '../../equalizer.styles';
-import detail from './book-detail.styles';
-
+import equalizer from "../../equalizer.styles";
+import detail from "./book-detail.styles";
 
 export class bookDetail extends LitElement {
   static properties = {
-    title: {},
-    author: {},
-    img: {},
-    genre: {},
-    editorial: {},
-    yearOfPublication: {}
+    book: { type: Object },
   };
 
   constructor() {
     super();
-    this.title = 'Título del libro';
-    this.author = 'Autor del libro';
-    this.img = '';
-    this.genre = 'Género';
-    this.editorial = 'Editorial';
-    this.yearOfPublication = '1994';
+    this.book = {
+      title: "Título del libro",
+      author: "Autor del libro",
+      img: "",
+      genre: "Género",
+      editorial: "Editorial",
+      yearOfPublication: "1994",
+    };
   }
 
   static get styles() {
-    return [ equalizer, detail ];
+    return [equalizer, detail];
   }
 
   render() {
     return html`
       <section class="card-wrapper">
-          <div class="card-img">
-            <img
-              class="book-cover"
-              src="${this.img ? this.img : "./img/book-cover.png"}"
-              alt="${ this.title }"
-            />
+        <div class="card-img">
+          <img
+            class="book-cover"
+            src="${this.book?.img ? this.book?.img : "./img/book-cover.png"}"
+            alt="${this.book?.title}"
+          />
+        </div>
+        <div class="card-body">
+          <div class="card-header">
+            <h1 class="book-title">
+              ${this.book?.title}
+              <span class="genre">(${this.book?.genre})</span>
+            </h1>
           </div>
-          <div class="card-body">
-            <div class="card-header">
-              <h1 class="book-title">${ this.title }</h1>
-              <h6 class="genre">(${ this.genre })</h6>
-            </div>
-            <div class="card-content">
-              <h2 class="subtitle">Autor del libro:</h2>
-              <p class="card-text">${ this.author }</p>
-            </div>
-            <div class="card-content">
-              <h2 class="subtitle">Editorial:</h2>
-              <p class="card-text">${ this.editorial}</p>
-            </div>
-            <div class="card-content">
-              <h2 class="subtitle">Año de publicación:</h2>
-              <p class="card-text">${ this.yearOfPublication}</p>
-            </div>
+          <div class="card-content">
+            <h2 class="subtitle">Autor del libro:</h2>
+            <p class="card-text">${this.book?.author}</p>
           </div>
-          <a class="backpage" href="index.html">Atrás</a>
-        </section>
+          <div class="card-content">
+            <h2 class="subtitle">Editorial:</h2>
+            <p class="card-text">${this.book?.editorial}</p>
+          </div>
+          <div class="card-content">
+            <h2 class="subtitle">Año de publicación:</h2>
+            <p class="card-text">${this.book?.yearOfPublication}</p>
+          </div>
+        </div>
+        <a class="backpage" href="/">Atrás</a>
+      </section>
     `;
   }
 }
-customElements.define('book-detail', bookDetail);
+customElements.define("book-detail", bookDetail);

@@ -9,34 +9,18 @@ export default css`
     width: 100%;
   }
 
-  .main-detail {
-    background-color: lightblue;
+  .container-detail {
     margin: 0 auto;
-    width: 300px;
-  }
-
-  .cardList {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
-    grid-auto-rows: minmax(300px, auto);
-    grid-column-gap: 28px;
-    grid-row-gap: 40px;
-    justify-items: center;
-    margin: 0 auto;
-    max-width: 899px;
-  }
-
-  .searcher-container {
-    margin: 32px auto;
-    width: 600px;
+    padding-top: 100px;
+    width: 376px;
   }
 
   @media (min-width: 1024px) {
     .main {
-      padding-top: 100px;
+      width: 900px;
     }
 
-    .main-detail {
+    .container-detail {
       width: 900px;
     }
   }

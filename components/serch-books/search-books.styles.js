@@ -1,18 +1,17 @@
 import { css } from "lit-element";
 
 export default css`
-  :host {
-    width: 198px;
-  }
-
-  .label-text {
-    font-weight: bold;
-    font-size: 24px;
+  .searcher-container {
+    margin: 32px auto;
+    max-width: 500px;
   }
 
   .input-text {
     background-color: #fff;
-    width: 260px;
+    font-size: 24px;
     line-height: 40px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
   }
 `;

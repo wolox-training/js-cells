@@ -1,110 +1,57 @@
 import { LitElement, html } from "lit";
+import dataBooks from "./data/dataBooks";
 
-import "./components/app-navbar/app-nanbar";
-import "./components/serch-books/search-books";
-import "./components/book-cover/book-cover";
+import "./components/app-navbar/app-navbar";
+import "./components/book-list/book-list";
 import "./components/book-detail/book-detail";
+
 import equalizer from "./equalizer.styles";
 import styles from "./application.styles";
 
 export class AppBook extends LitElement {
   static properties = {
-    data: { type: Array },
-    dataFilter: { type: Array },
-    page: { type: String },
-    homePage: { type: String },
+    book: {},
+    path: { attribute: false },
   };
 
   static styles = [equalizer, styles];
 
   constructor() {
     super();
-    this.page = "home";
-  }
-
-  async fetchData() {
-    this.data = await (await fetch("./data/dataBooks.json")).json();
-    this.dataFilter = this.data;
+    this.path = window.location.pathname;
   }
 
   firstUpdated() {
-    this.fetchData();
-  }
-
-  homePage() {
-    this.page = "home";
-  }
-
-  detailPage(book) {
-    console.log(book);
-    this.page = "detail";
-    const { img, title, author, genre, editorial, yearOfPublication } = book;
-    this.title = title;
-    this.img = img;
-    this.author = author;
-    this.genre = genre;
-    this.editorial = editorial;
-    this.yearOfPublication = yearOfPublication;
-  }
-
-  filterBook(e) {
-    console.log(e.target.shadowRoot.activeElement.value);
-    this.dataFilter = [];
-    let wordFilter = e?.target.shadowRoot.activeElement.value.toLowerCase();
-
-    this.data?.map((cover) => {
-      const title = cover.title.toLowerCase();
-      const author = cover.author.toLowerCase();
-
-      if (
-        title.indexOf(wordFilter) !== -1 ||
-        author.indexOf(wordFilter) !== -1
-      ) {
-        console.log("Entro a if");
-        this.dataFilter = [...this.dataFilter, cover];
-      }
+    window.addEventListener("popstate", () => {
+      this.path = window.location.pathname;
+      this.book = window.history.state;
     });
+    this.book = window.history.state;
+  }
 
-    console.log(wordFilter);
-    console.log("data-filter", this.dataFilter);
+  detailPage({ detail }) {
+    this.book = detail;
+    this.path = `/${this.book.title.replace(/ /g, "-")}`;
+    window.history.pushState({ ...detail }, "", this.path);
   }
 
   render() {
     return html`
-      ${this.page == "home" ? html`<app-navbar></app-navbar>` : ""}
-      <main class="main">
-        ${this.page == "home"
-          ? html`
-              <div class="searcher-container">
-                <search-books @keyup="${this.filterBook}"></search-books>
-              </div>
-              <section class="cardList">
-                ${this.dataFilter?.map(
-                  (book, i) => html`
-                    <book-cover
-                      @click="${() => this.detailPage(book)}"
-                      img="${book.img}"
-                      title="${book.title}"
-                      author="${book.author}"
-                      bookSelected=${i}
-                    ></book-cover>
-                  `
-                )}
-              </section>
-            `
-          : html`
-              <div class="main-detail">
-                <book-detail
-                  img="${this.img}"
-                  title="${this.title}"
-                  author="${this.author}"
-                  genre="${this.genre}"
-                  editorial="${this.editorial}"
-                  yearOfPublication="${this.yearOfPublication}"
-                ></book-detail>
-              </div>
-            `}
-      </main>
+      ${this.path === "/"
+        ? html`
+            <app-navbar></app-navbar>
+            <main class="main">
+              <book-list
+                @bookSelected=${this.detailPage}
+                .books=${dataBooks.results}
+              ></book-list>
+            </main>
+          `
+        : html`
+            <div class="container-detail">
+              <book-detail .book=${this.book}></book-detail>
+            </div>
+          `}
     `;
   }
 }

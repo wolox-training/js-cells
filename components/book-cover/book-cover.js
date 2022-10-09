@@ -1,21 +1,20 @@
 import { LitElement, html } from "lit";
 
-import equalizer from '../../equalizer.styles';
+import equalizer from "../../equalizer.styles";
 import cover from "./book-cover.styles";
 
 export class bookCover extends LitElement {
   static properties = {
-    title: {},
-    author: {},
-    img: {},
-    bookSelected: { type: Number},
+    book: { type: Object },
   };
 
   constructor() {
     super();
-    this.title = "Título del libro";
-    this.author = "Autor del libro";
-    this.img = "";
+    this.book = {
+      title: "Título del libro",
+      author: "Autor del libro",
+      img: "",
+    };
   }
 
   static get styles() {
@@ -27,11 +26,11 @@ export class bookCover extends LitElement {
       <div class="cardList-wrapper">
         <img
           class="cardList-cover"
-          src="${this.img ? this.img : "./img/book-cover.png"}"
-          alt="img-cover"
+          src="${this.book?.img ? this.book?.img : "./img/book-cover.png"}"
+          alt="${this.book?.title}"
         />
-        <h2 class="cardList-title">${this.title}</h2>
-        <p class="cardList-author">${this.author}</p>
+        <h2 class="cardList-title">${this.book?.title}</h2>
+        <p class="cardList-author">${this.book?.author}</p>
       </div>
     `;
   }
