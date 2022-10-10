@@ -6,8 +6,9 @@
   "description": "wolox-cell",
   "version": "1.0.0",
   "main": "index.js",
+  "module": "index.js",
   "scripts": {
-    "start": "web-dev-server --node-resolve --open --watch"
+    "start": "web-dev-server --node-resolve --open --watch --app-index index.html"
   },
   "repository": {
     "type": "git",
