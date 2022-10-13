@@ -1,17 +1,10 @@
 import { LitElement, html } from "lit";
 
-import navbar from "./app-navbar.styles";
+import navbarStyle from "./app-navbar.styles";
 
 export class appNavbar extends LitElement {
-  static properties = {
-  };
-
-  constructor() {
-    super();
-  }
-
   static get styles() {
-    return [navbar];
+    return [navbarStyle];
   }
 
   render() {

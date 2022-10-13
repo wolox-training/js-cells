@@ -4,7 +4,7 @@ import "../book-cover/book-cover";
 import "../serch-books/search-books";
 
 import equalizer from "../../equalizer.styles";
-import cover from "./book-list.styles";
+import bookListStyle from "./book-list.styles";
 
 export class bookList extends LitElement {
   static properties = {
@@ -19,11 +19,10 @@ export class bookList extends LitElement {
   }
 
   static get styles() {
-    return [equalizer, cover];
+    return [equalizer, bookListStyle];
   }
 
   firstUpdated() {
-    this.booksTemp = [];
     this.booksTemp = [...this.books];
   }
 
@@ -31,7 +30,7 @@ export class bookList extends LitElement {
     this.booksTemp = detail;
   }
 
-  clickBook(book) {
+  onClickBook(book) {
     const e = new CustomEvent("bookSelected", {
       detail: book,
     });
@@ -49,7 +48,7 @@ export class bookList extends LitElement {
           (book) =>
             html`
               <book-cover
-                @click=${() => this.clickBook(book)}
+                @click=${() => this.onClickBook(book)}
                 .book=${book}
               ></book-cover>
             `

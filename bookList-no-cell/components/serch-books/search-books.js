@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit";
 
-import search from "./search-books.styles";
+import searchStyle from "./search-books.styles";
 
 export class searchBooks extends LitElement {
   static properties = {
@@ -16,23 +16,19 @@ export class searchBooks extends LitElement {
   }
 
   static get styles() {
-    return [search];
+    return [searchStyle];
   }
 
   filterBook(e) {
     this.dataFilter = [];
     let wordFilter = e.target?.value.toLowerCase();
 
-    this.data?.map((book) => {
+    this.dataFilter = this.data?.filter((book) => {
       const title = book.title.toLowerCase();
       const author = book.author.toLowerCase();
-
-      if (
-        title.indexOf(wordFilter) !== -1 ||
-        author.indexOf(wordFilter) !== -1
-      ) {
-        this.dataFilter = [...this.dataFilter, book];
-      }
+      return (
+        title.indexOf(wordFilter) !== -1 || author.indexOf(wordFilter) !== -1
+      );
     });
 
     const event = new CustomEvent("book-filter", {

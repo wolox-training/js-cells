@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit";
 
 import equalizer from "../../equalizer.styles";
-import detail from "./book-detail.styles";
+import detailStyle from "./book-detail.styles";
 
 export class bookDetail extends LitElement {
   static properties = {
@@ -21,7 +21,7 @@ export class bookDetail extends LitElement {
   }
 
   static get styles() {
-    return [equalizer, detail];
+    return [equalizer, detailStyle];
   }
 
   render() {
@@ -30,7 +30,7 @@ export class bookDetail extends LitElement {
         <div class="card-img">
           <img
             class="book-cover"
-            src="${this.book?.img ? this.book?.img : "./img/book-cover.png"}"
+            src="${this.book?.img || "./img/book-cover.png"}"
             alt="${this.book?.title}"
           />
         </div>

@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit";
 
 import equalizer from "../../equalizer.styles";
-import login from "./book-login.styles";
+import loginStyle from "./book-login.styles";
 
 export class bookLogin extends LitElement {
   static properties = {};
@@ -11,7 +11,7 @@ export class bookLogin extends LitElement {
   }
 
   static get styles() {
-    return [equalizer, login];
+    return [equalizer, loginStyle];
   }
 
   render() {
