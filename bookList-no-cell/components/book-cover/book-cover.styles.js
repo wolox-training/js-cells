@@ -27,7 +27,7 @@ export default css`
   .cardList-cover {
     display: block;
     height: 200px;
-    width: 142px;
+    width: 144px;
   }
 
   .cardList-title {
@@ -40,7 +40,7 @@ export default css`
     padding: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 142px;
+    width: 144px;
   }
 
   .cardList-author {
@@ -48,6 +48,6 @@ export default css`
     font-size: 14px;
     margin: 0;
     padding: 0;
-    width: 142px;
+    width: 144px;
   }
 `;

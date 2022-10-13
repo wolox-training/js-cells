@@ -3,7 +3,7 @@ import { LitElement, html } from "lit";
 import equalizer from "../../equalizer.styles";
 import detailStyle from "./book-detail.styles";
 
-export class bookDetail extends LitElement {
+class bookDetail extends LitElement {
   static properties = {
     book: { type: Object },
   };

@@ -2,7 +2,7 @@ import { LitElement, html } from "lit";
 
 import searchStyle from "./search-books.styles";
 
-export class searchBooks extends LitElement {
+class searchBooks extends LitElement {
   static properties = {
     data: { type: Array },
     dataFilter: { type: Array },

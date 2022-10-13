@@ -2,7 +2,7 @@ import { LitElement, html } from "lit";
 
 import navbarStyle from "./app-navbar.styles";
 
-export class appNavbar extends LitElement {
+class appNavbar extends LitElement {
   static get styles() {
     return [navbarStyle];
   }

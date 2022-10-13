@@ -6,7 +6,7 @@ import "../serch-books/search-books";
 import equalizer from "../../equalizer.styles";
 import bookListStyle from "./book-list.styles";
 
-export class bookList extends LitElement {
+class bookList extends LitElement {
   static properties = {
     books: { type: Array },
     booksTemp: { attribute: false },

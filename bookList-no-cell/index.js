@@ -8,7 +8,7 @@ import "./components/book-detail/book-detail";
 import equalizer from "./equalizer.styles";
 import styles from "./application.styles";
 
-export class AppBook extends LitElement {
+class AppBook extends LitElement {
   static properties = {
     book: {},
     path: { attribute: false },

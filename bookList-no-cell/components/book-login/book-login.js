@@ -3,7 +3,7 @@ import { LitElement, html } from "lit";
 import equalizer from "../../equalizer.styles";
 import loginStyle from "./book-login.styles";
 
-export class bookLogin extends LitElement {
+class bookLogin extends LitElement {
   static properties = {};
 
   constructor() {
