@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "lit": "^2.3.1"
+  },
+  "name": "js-cells",
+  "description": "wolox-cell",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "start": "web-dev-server --node-resolve --open --watch --app-index index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolox-training/js-cells.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolox-training/js-cells/issues"
+  },
+  "homepage": "https://github.com/wolox-training/js-cells#readme",
+  "devDependencies": {
+    "@web/dev-server": "^0.1.34"
+  }
+}

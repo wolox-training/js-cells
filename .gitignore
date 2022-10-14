@@ -1,6 +1,19 @@
+### Sass ###
+bookList-no-cell/.sass-cache/
+bookList-no-cell/.scss-cache/
+bookList-no-cell/*.css.map
+bookList-no-cell/*.sass.map
+bookList-no-cell/*.scss.map
+bookList-no-cell/*.css
+
+### NPM ###
+bookList-no-cell/node_modules/
+bookList-no-cell/package-lock.json
+
 *.DS_Store
 
 booklist/.DS_Store
+bookList-no-cell/.DS_Store
 
 # Logs
 booklist/logs
