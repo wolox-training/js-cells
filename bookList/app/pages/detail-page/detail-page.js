@@ -27,7 +27,7 @@ class DetailPage extends CellsPage {
     });
   }
 
-  handleBack(){
+  handleBack() {
     this.navigate('home');
   }
 
@@ -37,7 +37,10 @@ class DetailPage extends CellsPage {
 
       <div slot="app__main" class="container">
         <div class="container-detail">
-          <book-detail .book=${this.book} @handleBack=${this.handleBack}></book-detail>
+          <book-detail
+            .book=${this.book}
+            @handleBack=${this.handleBack}
+          ></book-detail>
         </div>
       </div>
     </cells-template-paper-drawer-panel>`;

@@ -8,11 +8,11 @@ const appConfig = require('./dev.js');
  * More info in README.md
  */
 const vbankConfig = Object.assign({}, appConfig, {
-  app_properties : {
+  app_properties: {
     mock: false,
     host: 'http://localhost:7071',
-    path: 'movements'
-  }
+    path: 'movements',
+  },
 });
 
 module.exports = vbankConfig;
