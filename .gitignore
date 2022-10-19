@@ -10,7 +10,9 @@ bookList-no-cell/*.css
 bookList-no-cell/node_modules/
 bookList-no-cell/package-lock.json
 
+# MAC Y VS CODE
 *.DS_Store
+*.vscode
 
 booklist/.DS_Store
 bookList-no-cell/.DS_Store
