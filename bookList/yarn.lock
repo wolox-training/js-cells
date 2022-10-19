@@ -4835,6 +4835,11 @@
   "resolved" "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
+"fsevents@~2.3.2":
+  "integrity" "sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro="
+  "resolved" "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
+
 "function-bind@^1.1.1":
   "integrity" "sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0="
   "resolved" "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/function-bind/-/function-bind-1.1.1.tgz"
