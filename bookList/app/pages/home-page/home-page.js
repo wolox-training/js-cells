@@ -12,15 +12,6 @@ class HomePage extends CellsPage {
     return 'home-page';
   }
 
-  static get properties() {
-    return {
-      book: {},
-    };
-  }
-
-  constructor() {
-    super();
-  }
 
   detailPage({ detail }) {
     this.publish('channel_book_selected', detail);
