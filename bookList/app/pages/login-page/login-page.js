@@ -13,14 +13,9 @@ class LoginPage extends CellsPage {
 
   static get properties() {
     return {
-      book: {},
       isEmail: { type: Boolean },
       isPassword: { type: Boolean },
     };
-  }
-
-  constructor() {
-    super();
   }
 
   detailPage({ detail }) {

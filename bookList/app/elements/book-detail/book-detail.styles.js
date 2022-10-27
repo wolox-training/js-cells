@@ -35,6 +35,10 @@ export default css`
     width: 20px;
   }
 
+  .backpage:hover {
+    cursor: pointer
+  }
+
   .card-img {
     padding: 40px 58px 16px 58px;
     position: relative;

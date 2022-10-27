@@ -13,7 +13,6 @@ class RegisterPage extends CellsPage {
 
   static get properties() {
     return {
-      book: {},
       isName: { type: Boolean },
       isLastname: { type: Boolean },
       isEmail: { type: Boolean },
@@ -21,10 +20,6 @@ class RegisterPage extends CellsPage {
       isPassword2: { type: Boolean },
       passwordValue: { type: String },
     };
-  }
-
-  constructor() {
-    super();
   }
 
   detailPage({ detail }) {
