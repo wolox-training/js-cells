@@ -16,10 +16,6 @@ class DetailPage extends CellsPage {
     };
   }
 
-  constructor() {
-    super();
-  }
-
   firstUpdated() {
     this.subscribe('channel_book_selected', (book) => {
       book;
