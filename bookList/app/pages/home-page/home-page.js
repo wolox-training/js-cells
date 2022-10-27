@@ -28,17 +28,16 @@ class HomePage extends CellsPage {
   }
 
   render() {
-    return html` <book-list></book-list>
-      <cells-template-paper-drawer-panel mode="seamed">
-        <div slot="app__header"></div>
+    return html` <cells-template-paper-drawer-panel mode="seamed">
+      <div slot="app__header"></div>
 
-        <div slot="app__main" class="container">
-          <book-list
-            @bookSelected=${this.detailPage}
-            .books=${dataBooks.results}
-          ></book-list>
-        </div>
-      </cells-template-paper-drawer-panel>`;
+      <div slot="app__main" class="container">
+        <book-list
+          @bookSelected=${this.detailPage}
+          .books=${dataBooks.results}
+        ></book-list>
+      </div>
+    </cells-template-paper-drawer-panel>`;
   }
 
   static get styles() {

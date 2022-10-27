@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 
 import equalizerStyles from '../../scripts/utils/equalizer.styles';
-import style from './book-detail.styles';
+import styles from './book-detail.styles';
 
 class BookDetail extends LitElement {
   static get is() {
@@ -27,7 +27,7 @@ class BookDetail extends LitElement {
   }
 
   static get styles() {
-    return [equalizerStyles, style];
+    return [equalizerStyles, styles];
   }
 
   handleBack() {
