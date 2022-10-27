@@ -33,7 +33,6 @@ class LoginPage extends CellsPage {
   }
 
   registerPage() {
-    console.log('register page');
     this.navigate('register');
   }
 
@@ -45,6 +44,7 @@ class LoginPage extends CellsPage {
       errorSubmit.style.display = 'block';
     } else {
       errorSubmit.style.display = 'none';
+      this.homePage();
     }
   }
 

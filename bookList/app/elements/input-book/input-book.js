@@ -54,7 +54,6 @@ class InputBook extends LitElement {
     switch (this.label.toLowerCase()) {
       case 'nombre':
       case 'apellido':
-        console.log(regexValidation.fullName.test(e?.target.value));
         if (!regexValidation.fullName.test(e?.target.value)) {
           e?.target.classList.add('input-error');
           this.textError = msgError.fullName;
@@ -105,15 +104,13 @@ class InputBook extends LitElement {
           e?.target.classList.remove('input-error');
           msgText.style.display = 'none';
           this.validate = true;
-          this.confirmPassword(e?.target.value);
+          this.inputValue(e?.target.value);
         }
 
         break;
       case 'confirmar password':
       case 'confirmar contraseña':
         this.typeInput = 'password';
-        console.log('pass1', this.passwordValue1);
-        console.log('pass2', e?.target.value);
         if (this.passwordValue1 !== e?.target.value) {
           this.textError = msgError.noPassword;
           msgText.style.display = 'block';
@@ -130,8 +127,8 @@ class InputBook extends LitElement {
     this.getValidate();
   }
 
-  confirmPassword(targetValue) {
-    const event = new CustomEvent('confirmPassword', {
+  inputValue(targetValue) {
+    const event = new CustomEvent('inputValue', {
       detail: targetValue,
     });
 

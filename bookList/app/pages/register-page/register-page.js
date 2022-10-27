@@ -78,7 +78,6 @@ class RegisterPage extends CellsPage {
   }
 
   firstPassword({ detail }) {
-    console.log('pass1', detail);
     this.passwordValue = detail;
   }
 
@@ -110,19 +109,20 @@ class RegisterPage extends CellsPage {
               <input-book
                 label="password"
                 @validate=${this.validatePassword}
-                @confirmPassword=${this.firstPassword}
+                @inputValue=${this.firstPassword}
               ></input-book>
               <input-book
                 label="confirmar password"
                 @validate=${this.validatePassword2}
-                @confirmPassword=${this.password2}
                 passwordValue1=${this.passwordValue}
               ></input-book>
               <button type="submit" class="btn-primary fill-set">
                 Sign Up
               </button>
             </form>
-            <button class="btn-secondary fill-set" @click=${ this.LoginPage }>Login</button>
+            <button class="btn-secondary fill-set" @click=${this.LoginPage}>
+              Login
+            </button>
           </div>
           <p class="errorSubmit">Todos los campos son requeridos</p>
         </section>
