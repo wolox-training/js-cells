@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 
 import equalizerStyles from '../../scripts/utils/equalizer.styles';
-import style from './book-detail.styles';
+import styles from './book-detail.styles';
 
 class BookDetail extends LitElement {
   static get is() {
@@ -27,13 +27,11 @@ class BookDetail extends LitElement {
   }
 
   static get styles() {
-    return [equalizerStyles, style];
+    return [equalizerStyles, styles];
   }
 
   handleBack() {
-    const e = new CustomEvent('handleBack', {
-      detail: '',
-    });
+    const e = new CustomEvent('handleBack');
     this.dispatchEvent(e);
   }
 
@@ -68,7 +66,7 @@ class BookDetail extends LitElement {
             <p class="card-text">${this.book?.yearOfPublication}</p>
           </div>
         </div>
-        <a class="backpage" href="#" @click = ${this.handleBack}>Atrás</a>
+        <div class="backpage" @click = ${this.handleBack}>Atrás</div>
       </section>
     `;
   }

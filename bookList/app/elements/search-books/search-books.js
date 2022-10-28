@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 
-import style from './search-books.styles';
+import styles from './search-books.styles';
 
 class SearchBooks extends LitElement {
   static get is() {
@@ -22,7 +22,7 @@ class SearchBooks extends LitElement {
   }
 
   static get styles() {
-    return [style];
+    return [styles];
   }
 
   filterBook(e) {

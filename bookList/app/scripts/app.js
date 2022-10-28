@@ -1,11 +1,13 @@
-(function() {
+(function () {
   'use strict';
 
   window.CellsPolymer.start({
     routes: {
-      'home': '/',
-      'detail': '/detail',
+      login: '/',
+      register: '/register',
+      home: '/home',
+      detail: '/detail',
       // 'movement-detail': '/movement/:id/:label',
-    }
+    },
   });
-}());
+})();
